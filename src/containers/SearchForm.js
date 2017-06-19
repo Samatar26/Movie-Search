@@ -7,9 +7,14 @@ class SearchForm extends Component {
   renderField = field => {
     return <SearchBar type="text" {...field.input} />;
   };
+
+  getLatestMovies = ({ searchTerm }) => {
+    console.log(searchTerm);
+  };
   render() {
+    const { handleSubmit } = this.props;
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.getLatestMovies)}>
         <Field name="searchTerm" component={this.renderField} />
       </form>
     );

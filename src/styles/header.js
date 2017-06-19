@@ -4,7 +4,7 @@ import { Field } from 'redux-form';
 export const SearchBar = styled.input`
   width: 100%;
   padding: 0.75em 1em;
-  margin-right: 0.4em;
+  margin:0.1em;
   background-color: #ebebe2;
   border-radius: 2px;
   border: none;
