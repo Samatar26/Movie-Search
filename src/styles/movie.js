@@ -9,7 +9,9 @@ export const MoviesList = styled.main`
 export const MovieContainer = styled.figure`
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 20%;
+  padding: 1em;
+  margin: 1em;
   min-width: 400px;
   align-items: center;
   & > * + * {

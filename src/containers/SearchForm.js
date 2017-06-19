@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { SearchBar } from './../styles/header';
+import { MovieForm, SearchBar } from './../styles/header';
 import * as actions from './../actions/index';
 import { Field, reduxForm } from 'redux-form';
 
@@ -15,9 +15,9 @@ class SearchForm extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.getMovies)}>
+      <MovieForm onSubmit={handleSubmit(this.getMovies)}>
         <Field name="searchTerm" component={this.renderField} />
-      </form>
+      </MovieForm>
     );
   }
 }
