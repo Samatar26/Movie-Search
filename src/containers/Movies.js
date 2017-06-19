@@ -7,7 +7,9 @@ class Movies extends Component {
     this.props.fetchLatestMovies();
   }
   render() {
-    console.log(this.props);
+    this.props.movies.forEach(movie => {
+      console.log(movie.title);
+    });
     return (
       <div>
         Movies
