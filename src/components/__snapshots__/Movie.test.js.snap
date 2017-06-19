@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<figure
+  className="sc-bwzfXH bnKnTl"
+>
+  <h3
+    className="sc-bxivhb lcNDmV"
+  >
+    Logan
+  </h3>
+  <img
+    className="sc-htpNat gPdQJU"
+    src="http://image.tmdb.org/t/p/w342/9EXnebqbb7dOhONLPV9Tg2oh2KD.jpg"
+  />
+  <p
+    className="sc-ifAKCX jtdfU"
+  >
+    Logan is the latest installment in the Logan series of Xmen
+    ...
+  </p>
+</figure>
+`;
