@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SearchBar } from './../styles/header';
+import * as actions from './../actions/index';
 import { Field, reduxForm } from 'redux-form';
 
 class SearchForm extends Component {
@@ -8,8 +9,8 @@ class SearchForm extends Component {
     return <SearchBar type="text" {...field.input} />;
   };
 
-  getMovies = ({ searchTerm }) => {
-    console.log(searchTerm);
+  getMovies = searchTerm => {
+    this.props.fetchSearchMovies(searchTerm);
   };
   render() {
     const { handleSubmit } = this.props;
@@ -21,6 +22,10 @@ class SearchForm extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return { movies: state.movies };
+}
+
 export default reduxForm({
   form: 'SearchForm',
-})(SearchForm);
+})(connect(mapStateToProps, actions)(SearchForm));

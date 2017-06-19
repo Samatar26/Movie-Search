@@ -10,11 +10,19 @@ export function fetchLatestMovies() {
   };
 }
 
-export function fetchSearchMovies() {
+export function fetchSearchMovies(searchTerm) {
   return function(dispatch) {
-    fetch(`${ROOT_URL}/search`, { method: 'GET' })
+    console.log(searchTerm);
+    fetch(`${ROOT_URL}/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(searchTerm),
+    })
       .then(response => response.json())
-      .then(data => dispatch({ type: FETCH_SEARCH_MOVIES, payload: data }))
+      .then(data => {
+        const movieResults = data.results.filter(movie => movie.poster_path);
+        return dispatch({ type: FETCH_SEARCH_MOVIES, payload: movieResults });
+      })
       .catch(err => console.log(err));
   };
 }
