@@ -3,8 +3,11 @@ import * as actions from './../actions/index';
 import { connect } from 'react-redux';
 
 class Movies extends Component {
+  componentWillMount() {
+    this.props.fetchLatestMovies();
+  }
   render() {
-    console.log(this.props.movies);
+    console.log(this.props);
     return (
       <div>
         Movies

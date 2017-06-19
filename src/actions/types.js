@@ -1,1 +1,1 @@
-export const FETCH_LATEST = 'fetch_latest';
+export const FETCH_LATEST_MOVIES = 'fetch_latest_movies';
