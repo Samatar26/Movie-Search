@@ -16,9 +16,11 @@ class Movie extends Component {
       <MovieContainer>
         <MovieTitle>{this.props.title}</MovieTitle>
         <MoviePoster
-          src={`http://image.tmdb.org/t/p/w500${this.props.poster}`}
+          src={`http://image.tmdb.org/t/p/w342${this.props.poster}`}
         />
-        <MovieOverview>{this.props.overview}</MovieOverview>
+        <MovieOverview>
+          {this.props.overview.replace(/^(.{100}[^\s]*).*/, '$1')}...
+        </MovieOverview>
       </MovieContainer>
     );
   }
