@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import * as actions from './../actions/index';
 import { connect } from 'react-redux';
+import Movie from './../components/Movie';
 
 class Movies extends Component {
   componentWillMount() {
     this.props.fetchLatestMovies();
   }
   render() {
-    this.props.movies.forEach(movie => {
-      console.log(movie.title);
-    });
     return (
       <div>
-        Movies
+        {this.props.movies.map(movie =>
+          <Movie
+            title={movie.title}
+            poster={movie.poster_path}
+            overview={movie.overview}
+          />
+        )}
       </div>
     );
   }

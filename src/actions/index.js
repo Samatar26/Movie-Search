@@ -1,5 +1,5 @@
 import { FETCH_LATEST_MOVIES } from './types';
-const ROOT_URL = 'http://localhost:3000';
+const ROOT_URL = 'http://localhost:4000';
 
 export function fetchLatestMovies() {
   return function(dispatch) {
