@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import SearchForm from './../containers/SearchForm';
 class App extends Component {
   render() {
     return (
       <div>
-        Beginning of app.
+        <SearchForm />
       </div>
     );
   }
