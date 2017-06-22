@@ -5,7 +5,7 @@ import { MoviesList } from './../styles/movie';
 import Movie from './../components/Movie';
 
 class Movies extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchLatestMovies();
   }
   render() {
