@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <form
+    className="sc-bwzfXH eTiFGk"
+    onSubmit={[Function]}
+  >
+    <input
+      className="sc-bdVaJa kYdqnO"
+      name="searchTerm"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onDragStart={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value=""
+    />
+  </form>
+  <main
+    className="sc-htpNat gcwEVk"
+  />
+</div>
+`;

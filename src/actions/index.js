@@ -12,7 +12,6 @@ export function fetchLatestMovies() {
 
 export function fetchSearchMovies(searchTerm) {
   return function(dispatch) {
-    console.log(searchTerm);
     fetch(`${ROOT_URL}/search`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

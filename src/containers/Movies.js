@@ -9,7 +9,6 @@ class Movies extends Component {
     this.props.fetchLatestMovies();
   }
   render() {
-    console.log(this.props.movies);
     return (
       <MoviesList>
         {this.props.movies.map(movie =>
